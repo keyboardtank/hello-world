@@ -1,0 +1,12 @@
+# Este programa solicita un input, lo convierte a lowercase, verifica que solo contenga letras ni est vacio y de ser asi quita la primer letra del input y suma 'ay' al final
+pyg = 'ay'
+original = raw_input('Enter a word:')
+#condicional, verifica longitud =! 0 y que solo contenga letras
+if len(original) > 0 and original.isalpha():
+    word = original.lower()
+    new_word = word + first + pyg
+    new_word = new_word[1:]
+    print new_word
+#de no cumplir condiciones entrega resultado 'empty'
+else:
+print 'empty'
