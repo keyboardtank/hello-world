@@ -1,0 +1,32 @@
+# Este programa "tira" un par de dados, suma los valores, y solicita al usuario que ingrese un valor para adivinar el resultado, luego compara ambos valores y determina si hay paridad o no.
+from random import randint
+from time import sleep
+#funcion que solicita al user ingresar un valor
+def get_user_guess():
+  guess = int(raw_input('Please insert your guess: '))
+  return(guess)
+#funcion que tira los dados
+def roll_dice(number_of_sides):
+  first_roll = randint(1, number_of_sides)
+  second_roll = randint(1, number_of_sides)
+  max_val = (number_of_sides * 2)
+  print 'The maximun possible value is: %d' % max_val
+  guess = get_user_guess()
+  if guess > max_val:
+    print('Invalid value')
+  else:
+    print('Rolling... ')
+    sleep(2)
+    print('First roll equals to: %d') % first_roll
+    sleep(1)
+    print('Second roll equals to: %d') % second_roll
+    total_roll = (first_roll + second_roll)
+    print('Total roll equals to: %d' % total_roll)
+    print('Result...')
+    sleep(1)
+    if guess == total_roll:
+      print('You won!')
+    else:
+      print('Your guess is wrong. You lost!')
+
+roll_dice(13)     
