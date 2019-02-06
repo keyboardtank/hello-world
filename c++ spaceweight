@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main() {
+  int planetnumber;
+  double earthweight;
+  std::cout << "What's your earth weight? ";
+  std::cin >> earthweight;
+  std::cout << "Please insert the planet number: ";
+  std::cin >> planetnumber;
+  
+  if (planetnumber == 1) {
+   earthweight = (earthweight * 0.78);
+  }
+  else if (planetnumber == 2) {
+    earthweight = (earthweight * 0.39);
+  }
+  else if (planetnumber == 3) {
+    earthweight = (earthweight * 2.65);
+  }
+  else if (planetnumber == 4) {
+    earthweight = (earthweight * 1.17);
+  }
+  else if (planetnumber == 5) {
+    earthweight = (earthweight * 1.05);
+  }  
+  else if (planetnumber == 6) {
+    earthweight = (earthweight * 1.23);
+  }
+  else {
+    std::cout << "Invalid number.";
+  }
+  
+  std::cout << "\nYour weight: " << earthweight << "\n"; 
+}
